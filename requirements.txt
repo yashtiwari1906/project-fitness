@@ -1,0 +1,6 @@
+Flask==2.1.1
+Flask-SocketIO==5.1.1
+simple-websocket==0.5.1
+opencv-python==4.6.0.66
+mediapipe
+numpy
