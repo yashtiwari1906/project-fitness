@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js"></script>
+    <script src = "static/application.js"></script>
+    <title>Fitness App</title>
+</head>
+
+    <head>
+        <style>
+            {
+                box-sizing: border-box;
+            }
+            /* Set additional styling options for the columns*/
+            .column_left {
+            float: left;
+            width: 70%;
+            height: 500px;
+            text-align: center;
+            }
+            img{
+                width: 100%;
+                height: 80%;
+                text-align: center;
+            }
+
+            .column_right{
+                float:right;
+                width:30%;
+                height: 500px;
+                text-align: center;
+            }
+        
+            .row:after {
+            content: "";
+            display: table;
+            clear: both;
+            text-align: center;
+            }
+        </style>
+     </head>
+     <h1>Fitness App</h1>
+
+     <body>
+        <div class="container">
+
+            <div class="row">
+                <div class="column_left" style="background-color:#FFB695;">
+                    <h2>Column 1</h2>
+                    <form method="post" action="{{ url_for('tasks') }}">
+                        <input type="submit" value="pose detection" name="pose" />
+                    </form>
+                    <img src="{{ url_for('video_feed') }}" width="60%" height="80%">
+                    
+                </div>
+                <div class="column_right"  style="background-color:#96D1CD;">
+                    <div class="row" height="200px" style="background-color:#96D1CD;">
+                        <h2>Repititions</h2>
+                        <div class="container" id="content">
+                            <div class="row">
+                                <div id="log">
+                                </div> <!-- /#log -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" height="50%" style="background-color:#96D1CD;">
+                        <h2>Column 2</h2>
+                        <p>Data..</p>
+                    </div>
+                </div>
+                </div>
+                
+
+            
+
+            <div class="footer">
+                <ul class = "random" width = 300px height = 500000px style = "background-color:#FFB695;">
+                    <li>DO Squats Properly</li>
+                    <li>DO Squats Properly</li>
+                    <li>DO Squats Properly</li>
+                    <li>DO Squats Properly</li>
+                    <li>DO Squats Properly</li>
+                </ul>
+            </div>
+        </div>
+     </body>
+    </html>
+</body>
+</html>
