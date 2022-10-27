@@ -5,7 +5,7 @@ import datetime, time
 import os, sys
 import numpy as np
 from threading import Thread, Event
-from poseDetection import pose_detection_mediapipe
+from src.poseDetection import pose_detection_mediapipe
 
 from flask_socketio import SocketIO, emit
 from flask import Flask, render_template, url_for, copy_current_request_context
