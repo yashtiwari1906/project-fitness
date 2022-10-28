@@ -12,10 +12,10 @@ An AI assisted fitness application currently only know how to count squats.
 
 ## Installation & Usage
 ### Docker Installation & Usage
-1.) Building an Image from Dockerfile 
-- sudo docker build -t <name_of_image> ./docker
-2.) Running the image 
-- sudo docker run -p 8000:8080 <name_of_image>
+* Building an Image from Dockerfile 
+  - sudo docker build -t <name_of_image> ./docker
+* Running the image 
+  - sudo docker run -p 8000:8080 <name_of_image>
 
 ### Local Installation & Usage
 * make a virtual environment in python 
