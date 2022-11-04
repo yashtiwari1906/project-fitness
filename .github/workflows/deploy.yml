@@ -2,10 +2,10 @@ name: Deploy to production
 
 on:
   push:
-    branches: [ main ]
+    branches: [ feature/ci-cd ]
 
   pull_request:
-      branches: [ main ]
+      branches: [ feature/ci-cd ]
 
 jobs:
 
