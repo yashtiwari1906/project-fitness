@@ -47,7 +47,7 @@ thread_stop_event = Event()
 
 
 
-camera = cv2.VideoCapture("./data/youTube_video.mp4")
+camera = cv2.VideoCapture("../data/youTube_video.mp4")
     
 def pose_detection(frame, flag, y_hip_ref, y_knee_ref, counter, stage): 
     
