@@ -29,7 +29,7 @@ $(document).ready(function(){
     var numbers_received = [];
 
     //receive details from server
-    socket.on('newnumber', function(msg) {
+    socket.on('reps', function(msg) {
         //console.log("Received number" + msg.reps.toString());
         //maintain a list of ten numbers
         // if (numbers_received.length >= 10){

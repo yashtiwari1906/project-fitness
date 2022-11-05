@@ -123,8 +123,9 @@ def reps_counter():
     global prev, data
     if data['reps']!=prev: 
         prev = data['reps'] 
-        
-    socketio.emit('newnumber', data, namespace='/test')
+    while not thread_stop_event.isSet():
+        socketio.emit('reps', data, namespace='/test')
+        socketio.sleep(2)
 
 
 
