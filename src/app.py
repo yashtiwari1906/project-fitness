@@ -123,7 +123,9 @@ def reps_counter():
     global prev, data
     if data['reps']!=prev: 
         prev = data['reps'] 
+    print("reachd here")
     while not thread_stop_event.isSet():
+
         socketio.emit('reps', data, namespace='/test')
         socketio.sleep(2)
 
@@ -146,6 +148,6 @@ def test_disconnect():
 
 if __name__ == '__main__':
     #app.run(debug=True)
-    socketio.run(app, port = 8000, host = "0.0.0.0")
+    socketio.run(app, port = 5000, host = "0.0.0.0")
 camera.release()
 cv2.destroyAllWindows()     
