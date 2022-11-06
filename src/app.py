@@ -11,10 +11,11 @@ from flask_socketio import SocketIO, emit
 from flask import Flask, render_template, url_for, copy_current_request_context
 from random import random
 from time import sleep
+from werkzeug.utils import secure_filename
 
 
 
-global global_counter, capture,rec_frame, grey, switch, neg, face, rec, out, pose, data, prev
+global global_counter, capture,rec_frame, grey, switch, neg, face, rec, out, pose, data, prev, camera
 global_counter = 0 
 data = {"reps": 0}
 prev = 0
@@ -118,6 +119,19 @@ def tasks():
     
 
     return render_template('index.html')
+
+@app.route('/upload')
+def upload(): 
+    return render_template('upload.html', template_folder = "templates")
+
+@app.route('/uploader', methods = ['GET', 'POST'])
+def upload_file():
+   if request.method == 'POST':
+      f = request.files['file']
+    
+      f.save(os.path.join("../data/", secure_filename(f.filename)))
+      camera = os.path.join("../data/", secure_filename(f.filename))
+      return render_template("index.html")
 
 def reps_counter(): 
     global prev, data
