@@ -40,8 +40,8 @@ $(document).ready(function(){
         // for (var i = 0; i < numbers_received.length; i++){
         //     numbers_string = numbers_received[i].toString();
         // }
-        console.log("recieved reps as "+msg.reps.toString())
-        $('#log').html(msg.reps.toString());
+        console.log("recieved reps as "+msg.toString())
+        $('#log').html(msg.toString());
     });
 
 });
