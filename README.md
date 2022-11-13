@@ -1,6 +1,8 @@
 # project-fitness
 This project is all about implementing machine learning algorithms in the fitness application so that it would help people to learn how modern software concepts are applied with machine learning.
 
+![alt text](https://github.com/yashtiwari1906/project-fitness/blob/main/data/fitness-proj-image.png)
+
 # Table of Contents 
   * Installation & Usage
     * Docker Installation & Usage
